@@ -24,24 +24,17 @@ class Account
                 seperate_block
                 input = gets.chomp.downcase
                 write_history(input)
-                if input == "balance" 
+                case input
+                when "balance"
                     print_balance
-
-                elsif input == "deposit"
+                when "deposit"
                     deposit
-
-                elsif input == "withdraw"
+                when "withdraw"
                     withdraw
-
-                elsif input == "history"
+                when "history"
                     print_history
-
-                elsif input == "quit"
-                    save_data()
+                when quit
                     quit = true
-                else
-                    puts "invalid input."
-                end
             end
         end
 
